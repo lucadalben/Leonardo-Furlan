@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+  <head>
+    <title>Leonardo Furlan</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.cdnfonts.com/css/optima" rel="stylesheet" />
+    <link rel="stylesheet" href="painting.style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <section>
+      <div class="buttons">
+        <div class="prev" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="next" onclick="plusDivs(1)">&#10095;</div>
+      </div>
+
+      <div class="painting">
+        <img
+          class="slides"
+          src="img/15-Penso-che-un-sogno-così-non-ritorni-mai-più-90x105-oil-on-canvas-2023.jpg"
+          style="width: 100%"
+        />
+        <img
+          class="slides"
+          src="img/15.1-Pensocheunsognocosìnonritornimaipiù_ dett1.jpg"
+          style="width: 100%"
+        />
+        <img
+          class="slides"
+          src="img/15.2-Pensocheunsognocosìnonritornimaipiù_ dett2.jpg"
+          style="width: 100%"
+        />
+        <img
+          class="slides"
+          src="img/15.3-Pensocheunsognocosìnonritornimaipiù_ dett3.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="name">
+        <p>
+          "Penso che un sogno cos&#236; non ritorni mai pi&#250;", oil on
+          canvas, 90x105, 2023
+        </p>
+      </div>
+    </section>
+
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slides");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
